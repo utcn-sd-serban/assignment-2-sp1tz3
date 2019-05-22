@@ -1,6 +1,7 @@
 import React from "react";
+import AnswerList from "./AnswerList";
 
-const QuestionDetails = ({questionid, userid, title, text, creationdate, tags, score}) => (
+const QuestionDetails = ({questionid, userid, title, text, creationdate, tags, score,answers}) => (
     <div>
         <h2>Question</h2>
         <label>questionid: </label>
@@ -23,6 +24,9 @@ const QuestionDetails = ({questionid, userid, title, text, creationdate, tags, s
         <br />
         <label>score: </label>
         <span>{score}</span>
+        <br />
+        <AnswerList
+            answers={answers}/>
     </div>
 );
 

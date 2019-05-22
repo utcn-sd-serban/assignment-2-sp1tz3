@@ -1,6 +1,6 @@
 import React from 'react';
 
-const QuestionsList = ({questions, onCreateQuestion,onViewDetails}) => (
+const QuestionsList = ({questions, onCreateQuestion,onViewDetails,onAddAnswer}) => (
     <div>
         <h2>Questions</h2>
         <table border = '1'>
@@ -8,6 +8,7 @@ const QuestionsList = ({questions, onCreateQuestion,onViewDetails}) => (
                 <tr>
                     <th>Title: </th>
                     <th>Text : </th>
+                    <th></th>
                     <th></th>
                 </tr>
             </thead>
@@ -18,6 +19,7 @@ const QuestionsList = ({questions, onCreateQuestion,onViewDetails}) => (
                             <td>{question.title}</td>
                             <td>{question.text}</td>
                             <td><button onClick={() => onViewDetails(index)}>View Details</button></td>
+                            <td><button onClick={() => onAddAnswer(index)}>Add Answer</button> </td>
                         </tr>
                     ))
                 }
